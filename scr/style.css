@@ -1,0 +1,399 @@
+:root {
+    --bg: #fff;
+    --soft: #fdeee5;
+    --ink: #2a2420;
+    --mute: #6f655d;
+    --or: #e8532b;
+    --or-d: #c9401c;
+    --line: #eadfd7;
+    --f1: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+    --f2: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px)
+}
+
+@media (prefers-color-scheme:dark) {
+    :root:not([data-theme="light"]) {
+        --bg: #1c1613;
+        --soft: #2a1f1a;
+        --ink: #f6ede7;
+        --mute: #b8aaa0;
+        --line: #3a2d26
+    }
+}
+
+html {
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+    scroll-behavior: smooth
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.55 var(--f2)
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+:focus-visible {
+    outline: 3px solid var(--or);
+    outline-offset: 2px
+}
+
+.wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--f1);
+    line-height: 1.1;
+    margin: 0
+}
+
+/* topo */
+header {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    z-index: 5
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    height: 68px
+}
+
+.logo {
+    font: 700 22px var(--f1);
+    color: var(--or)
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex: 1;
+    font-weight: 500
+}
+
+nav a:hover {
+    color: var(--or)
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 6px;
+    padding: 11px 20px;
+    font: 500 15px var(--f2);
+    cursor: pointer
+}
+
+.btn.p {
+    background: var(--or);
+    color: #fff
+}
+
+.btn.p:hover {
+    background: var(--or-d)
+}
+
+.btn.o {
+    background: none;
+    border: 1.5px solid var(--or);
+    color: var(--or)
+}
+
+/* hero com busca */
+.hero {
+    position: relative;
+    min-height: 520px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(rgba(60, 25, 10, .38), rgba(60, 25, 10, .55)), linear-gradient(135deg, #f6a06b 0%, #e8532b 55%, #b83a17 100%)
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    max-width: 14ch;
+    margin: 0 auto 12px
+}
+
+.hero p {
+    margin: 0 auto 28px;
+    font-size: 18px;
+    max-width: 46ch
+}
+
+.search {
+    display: flex;
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--bg);
+    border-radius: 8px;
+    overflow: hidden;
+    color: var(--ink)
+}
+
+.search input {
+    flex: 1;
+    border: 0;
+    padding: 18px 20px;
+    font: 16px var(--f2);
+    background: none;
+    color: inherit;
+    min-width: 0
+}
+
+.search input:focus-visible {
+    outline-offset: -3px
+}
+
+.search .btn {
+    border-radius: 0;
+    padding: 0 28px
+}
+
+.tags {
+    margin-top: 14px;
+    font-size: 14px
+}
+
+.tags a {
+    margin: 0 8px;
+    text-decoration: underline;
+    text-underline-offset: 3px
+}
+
+/* seções */
+section {
+    padding: 72px 0
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 28px;
+    gap: 16px
+}
+
+.head h2 {
+    font-size: clamp(26px, 3.4vw, 36px)
+}
+
+.head a {
+    color: var(--or);
+    font-weight: 500
+}
+
+.cats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px
+}
+
+.cat {
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+    font: 700 20px var(--f1);
+    transition: transform .2s
+}
+
+.cat:hover {
+    transform: translateY(-3px)
+}
+
+.g1 {
+    background: linear-gradient(160deg, #ffb07a, #e8532b)
+}
+
+.g2 {
+    background: linear-gradient(160deg, #ffd0a8, #f08a4b)
+}
+
+.g3 {
+    background: linear-gradient(160deg, #f48b5f, #b83a17)
+}
+
+.g4 {
+    background: linear-gradient(160deg, #ffc58f, #e8532b)
+}
+
+.g5 {
+    background: linear-gradient(160deg, #e8532b, #7d2a10)
+}
+
+.g6 {
+    background: linear-gradient(160deg, #ffa36b, #d9531e)
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px
+}
+
+.card .img {
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    background-size: cover;
+    background-position: center
+}
+
+.card h3 {
+    font-size: 20px
+}
+
+.card p {
+    margin: 4px 0 0;
+    color: var(--mute);
+    font-size: 15px
+}
+
+.card b {
+    color: var(--or);
+    font-weight: 500
+}
+
+.soft {
+    background: var(--soft)
+}
+
+.promo {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center
+}
+
+.promo h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 14px
+}
+
+.promo p {
+    color: var(--mute);
+    margin: 0 0 22px;
+    max-width: 50ch
+}
+
+.promo .img {
+    aspect-ratio: 5/4;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px
+}
+
+.steps h3 {
+    font-size: 19px;
+    margin-bottom: 6px
+}
+
+.steps p {
+    margin: 0;
+    color: var(--mute)
+}
+
+/* rodapé */
+footer {
+    border-top: 1px solid var(--line);
+    padding: 48px 0 32px;
+    color: var(--mute);
+    font-size: 15px
+}
+
+.cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 28px;
+    margin-bottom: 32px
+}
+
+.cols h4 {
+    margin: 0 0 10px;
+    color: var(--ink);
+    font: 700 16px var(--f1)
+}
+
+.cols a {
+    display: block;
+    padding: 3px 0
+}
+
+.cols a:hover {
+    color: var(--or)
+}
+
+@media (max-width:760px) {
+    nav {
+        display: none
+    }
+
+    .bar {
+        justify-content: space-between
+    }
+
+    .promo {
+        grid-template-columns: 1fr
+    }
+
+    .search {
+        flex-direction: column
+    }
+
+    .search .btn {
+        padding: 14px
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important
+    }
+}
+
+.img-mar {
+    background-image: url(../images/recanto-do-mar.jpg)
+}
+
+.img-serra {
+    background-image: url(../images/serra-dourada.jpg)
+}
+
+.img-vale {
+    background-image: url(../images/vale-do-sol.jpg)
+}
+
+.img-ilha {
+    background-image: url(../images/ilha-aurora.jpg)
+}
