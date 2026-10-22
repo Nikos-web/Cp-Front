@@ -1,0 +1,5 @@
+Paleta de cores - laranja, preto, marrom escuro
+
+Tom e Personalidade - tom aconchegante, moderno e de fácil entendimento
+
+Estrutura - Pesquisa (Para pesquisas precisas), Tipo de viagem(Para separar os resorts por tipo), Destaques(Para mostrar as paradas de mais sucesso para ter um destaque), Oferta(Para o cliente se interessar mais), rodapé
