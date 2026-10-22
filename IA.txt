@@ -1,0 +1,8 @@
+Ultilização de IA
+
+"Vamos realizar a criação de um pequeno site de resorts, de forma minimalista e simples utilizando o padrão de cores (branco e laranja) da foto a cima, realizar a estrutura do site o mais próximo do link a seguir (https://www.istockphoto.com/)"
+
+"Adicione as seguintes imagens para exemplos"
+
+"Faça o código com separações em pastas, como html, css e java"
+
